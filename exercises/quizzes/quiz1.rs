@@ -16,6 +16,10 @@ fn main() {
     // You can optionally experiment here.
 }
 
+fn calculate_price_of_apples(a: u8) -> u8 {
+    ((a <= 40) as u8 + 1) * a
+}
+
 // Don't change the tests!
 #[cfg(test)]
 mod tests {
