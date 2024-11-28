@@ -1,17 +1,24 @@
 fn trim_me(input: &str) -> &str {
-    // TODO: Remove whitespace from both ends of a string.
+    input.trim() // Убираем пробелы с начала и конца строки
 }
 
 fn compose_me(input: &str) -> String {
-    // TODO: Add " world!" to the string! There are multiple ways to do this.
+    format!("{} world!", input) // Добавляем " world!" к строке
 }
 
 fn replace_me(input: &str) -> String {
-    // TODO: Replace "cars" in the string with "balloons".
+    input.replace("cars", "balloons") // Заменяем "cars" на "balloons"
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // Пример использования функций:
+    let trimmed = trim_me("   Hello!   ");
+    let composed = compose_me("Hello");
+    let replaced = replace_me("I think cars are cool");
+    
+    println!("Trimmed: {}", trimmed);
+    println!("Composed: {}", composed);
+    println!("Replaced: {}", replaced);
 }
 
 #[cfg(test)]
